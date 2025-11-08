@@ -14,6 +14,9 @@ Route::get('/', [HomeController::class, 'my_home']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+Route::get('/add_food', [HomeController::class, 'add_food'])->name('add_food');
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
